@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1C1C1C;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+}
+
+.container {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+}
+
+
+
+h1 {
+    font-size: 1.675rem;
+    font-weight: 800;
+    color: white;
+}
+
+.link {
+    color: white;
+    font-weight: 700;
+    font-size: .675rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.find-movie {
+    display: flex;
+    margin-top: .5rem;
+    flex-direction: column;
+    width: 100%;
+    gap: .6rem;
+
+}
+
+.find,
+input {
+    border-radius: 1rem;
+}
+
+
+input,
+button {
+    padding: .3rem;
+}
+
+.container-of-Movies.empty {
+    background-image: url("../images/before search.png");
+}
+
+.container-of-Movies.not-found {
+    background-image: url("../images/no-data-initial.png");
+}
+
+.container-of-Movies.filled {
+    background-image: none;
+}
+
+.container-of-Movies {
+    background-color: white;
+    width: 100%;
+    min-height: 100vh;
+    border: solid rgb(224, 221, 221) .05rem;
+
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.movie-card {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E5E7EB;
+    max-width: 900px;
+    width: 100%;
+    padding: .2rem;
+    color: black;
+    margin-top: 4rem;
+
+}
+
+.poster-image {
+    width: 80px;
+    height: 120px;
+    border-radius: .25rem;
+    object-fit: cover;
+}
+
+.add-movie {
+    background-color: white;
+    border: none;
+
+
+}
+
+.add-movie img {
+    height: 1em;
+}
+
+.rest-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+
+}
+
+.movie-runtime,
+.movie-genre,
+.add-movie {
+    flex: 1;
+
+}
+
+.title-rating {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+
+}
+
+
+
+.title-rating,
+.rest-content,
+.movie-plot {
+    padding: .5rem;
+    margin: 1rem 2rem;
+}
+
+@media(min-width:675px) {
+    header {
+        justify-content: space-between;
+        height: 14rem;
+        position: relative;
+        background-image: url("../images/dafefd9440637dd9b0240098474b6d8dd9487d8c.png");
+    }
+
+    .find-movie {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: center;
+        align-items: center;
+        height: 3.375rem;
+        position: absolute;
+        bottom: -2rem;
+        width: 84%;
+        border-radius: 1rem;
+        background-color: white;
+        border: #c2c4c9 solid 1px;
+        z-index: 2;
+    }
+
+    input {
+        flex: 3;
+        background-color: transparent;
+        border: none;
+    }
+
+    button {
+        flex: 1;
+        height: 100%;
+    }
+
+    h1 {
+
+        font-size: 2.675rem;
+
+    }
+
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+
+    h1,
+    .link {
+
+
+        color: white;
+
+
+
+    }
+
+
+
+    .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 2;
+        top: 7rem;
+        right: 2rem;
+        left: 2rem;
+    }
+
+    input {
+        flex: 3;
+    }
+
+    .find {
+        background-color: #D1D5DB;
+        border: none;
+        border-bottom-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        flex: 1;
+    }
+
+
+
+    .link {
+
+        font-size: .875rem;
+
+        line-height: 1;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        ;
+    }
+
+    .container-of-Movies {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: .5rem;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .poster-image {
+        width: 120px;
+        height: 180px;
+    }
+
+}
